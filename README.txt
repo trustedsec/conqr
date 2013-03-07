@@ -53,5 +53,6 @@ Handheld device ----> joined to access point ----> on same lan as QRCode Server
 
 That's it!
 
+TODO:
 
-
+Web interface is ugly, first release, will make nicer in next release
