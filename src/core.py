@@ -71,6 +71,7 @@ def gen_qrcode(user, con_name, option):
 	filewrite.write(qrcode + "," + user + "," + option + "\n")
 	filewrite.close()
 
+# main mail function to send emails out
 def mail(to, subject, text, attach, user, pwd, server, port):
 
 	# Send the message from, to, subject, etc.

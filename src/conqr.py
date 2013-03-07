@@ -108,5 +108,8 @@ try:
 			time.sleep(0.2)
 			os.remove("qrcode.png")
 
+except KeyboardInterrupt:
+	print "[*] Okay, exiting out, you got it. Thanks for using ConQR.."
+
 except Exception, e:
 	print "Something went wrong! Printing the error: " + str(e)
