@@ -99,12 +99,12 @@ class HTTPHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 				reg = file("database/con.registered", "r")
 				reg_write = file("database/con.registered", "a")
 				reg_data = reg.read()
-				match = re.search(query)
+				match = re.search(query, reg_data)
 				if match:
 					self.wfile.write("User has already registered at the desk. Please check into this.")
 
 				else:
-					reg_write = (query)
+					reg_write.write(query)
 					reg_write.close()
                 	                self.wfile.write('<html><body><BODY BGCOLOR="#66ff66">User has been registered successfully. Refreshing in 10 seconds.<meta HTTP-EQUIV="REFRESH" content="10; url=./"></body></html>')
 
@@ -140,7 +140,7 @@ Simply scan a QR code using a mobile device of some sort, doesn't matter which a
 # this ultimately handles the http requests and stuff
 def main(server_class=BaseHTTPServer.HTTPServer,handler_class=HTTPHandler):
 	try:
-	        server_address = ('', int(8080))
+	        server_address = ('', int(80))
 		httpd = server_class(server_address, handler_class)
 		httpd.serve_forever()
 
@@ -153,5 +153,5 @@ def main(server_class=BaseHTTPServer.HTTPServer,handler_class=HTTPHandler):
 		sys.exit()
 
 #if __name__ == "__main__":
-print "{*} The ConQR Server is running on port 8080, open a local browser or remote to view... {*}"
+print "{*} The ConQR Server is running on port 80, open a local browser or remote to view... {*}"
 main()

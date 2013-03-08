@@ -49,7 +49,7 @@ def gen_qrcode(user, con_name, option):
 	qrcode = hash() + "-" + hash() + "-" + hash() + "-" + hash()
 	# generate the qrcode 
 	qr = QRCode(5, QRErrorCorrectLevel.L)
-	qr.addData("http://%s/qrcode?=q%s" % (con_name,qrcode))
+	qr.addData("http://%s/qrcode?q=%s" % (con_name,qrcode))
 	qr.make()
 	im = qr.makeImage()
 	im.save("qrcode.png", format='png')

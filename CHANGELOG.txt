@@ -1,4 +1,15 @@
 ~~~~~~~~~~~~~~~~~~~
+version 0.2
+~~~~~~~~~~~~~~~~~~~
+
+* Added a check for python-imaging, if it's not installed, it will error out
+* Fixed a report of a query string parameter that was not in the proper place when generating the QRCode
+* Moved the port to the standard port 80 within the codeset instead of 8080
+* Fixed an issue that would cause a user that has already registered to not be detected
+* Fixed an issue that would cause an exceptions if user was not already inside of the con database registration
+* Fixed an issue that would check for reg instead of reg_query and cause a mismatch
+
+~~~~~~~~~~~~~~~~~~~
 version 0.1
 ~~~~~~~~~~~~~~~~~~~
 

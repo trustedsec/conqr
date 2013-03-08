@@ -1,5 +1,13 @@
 import math
-from PIL import Image, ImageDraw
+import sys
+
+try:
+	from PIL import Image, ImageDraw
+
+except ImportError:
+	print "[!] You need to install python-imaging. For Ubuntu type apt-get install python-imaging"
+	print "[!] ConQR will not work unless python-imaging is installed."
+	sys.exit()
 
 #QRCode for Python
 #
