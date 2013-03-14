@@ -1,6 +1,6 @@
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 version 0.2
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 * Added a check for python-imaging, if it's not installed, it will error out
 * Fixed a report of a query string parameter that was not in the proper place when generating the QRCode
@@ -9,8 +9,8 @@ version 0.2
 * Fixed an issue that would cause an exceptions if user was not already inside of the con database registration
 * Fixed an issue that would check for reg instead of reg_query and cause a mismatch
 
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 version 0.1
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 * first release of ConQR
