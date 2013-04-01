@@ -31,8 +31,8 @@ When you are ready, run conqr.py and provide which option you want and a filenam
 
 Basic structure:
 
-src/database/con.database - contains all of the email addresses and qrcode hash 
-src/database/con.registered - contains those that have already registered
+src/database/conferences.txt - contains all of the email addresses and qrcode hash 
+src/database/registered.txt - contains those that have already registered
 configration/config - contains the config options for the qrcode system
 
 QRCode Server:
