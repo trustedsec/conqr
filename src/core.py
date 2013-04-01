@@ -55,12 +55,12 @@ def gen_qrcode(user, con_name, option):
 	im.save("qrcode.png", format='png')
 	
 	# save the qrcode hash in the database for later use
-	if not os.path.isfile("database/con.database"):
-		filewrite = file("database/con.database", "w")
+	if not os.path.isfile("database/conference.txt"):
+		filewrite = file("database/conference.txt", "w")
 		filewrite.write("")
 		filewrite.close()
-
-	filewrite = file("database/con.database", "a")
+	
+	filewrite = file("database/conference.txt", "a")
 	# attendee
 	if option == "1": option = "ATTENDEE"
 	# speaker

@@ -51,8 +51,7 @@ You can also specify a name seperated by a comma, for example:
 
 test@test.com,John Doe
 
-Usage: python conqr.py <option> <filename.txt>
-	"""
+Usage: python conqr.py <option> <filename.txt>	"""
 	sys.exit()
 
 # here is our main routine

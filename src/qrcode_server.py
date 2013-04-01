@@ -84,20 +84,20 @@ class HTTPHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 
 		if path == "/qrcode":
 			query = query.replace("q=", "")
-                        self.send_response(200)
-                        self.send_header('Content_type', 'text/html')
-                        self.end_headers()
-	                fileopen = file("database/con.database", "r")
-        	        data = fileopen.read()
-                	match = re.search(query, data)
-                	if match:
-				if not os.path.isfile("database/con.registered"):
-					filewrite = file("database/con.registered", "w")
+			self.send_response(200)
+			self.send_header('Content_type', 'text/html')
+			self.end_headers()
+			fileopen = file("database/conference.txt", "r")
+			data = fileopen.read()
+			match = re.search(query, data)
+			if match:
+				if not os.path.isfile("database/registered.txt"):
+					filewrite = file("database/registered.txt", "w")
 					filewrite.write("")
 					filewrite.close()
 
-				reg = file("database/con.registered", "r")
-				reg_write = file("database/con.registered", "a")
+				reg = file("database/registered.txt", "r")
+				reg_write = file("database/registered.txt", "a")
 				reg_data = reg.read()
 				match = re.search(query, reg_data)
 				if match:
@@ -106,11 +106,11 @@ class HTTPHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 				else:
 					reg_write.write(query)
 					reg_write.close()
-                	                self.wfile.write('<html><body><BODY BGCOLOR="#66ff66">User has been registered successfully. Refreshing in 10 seconds.<meta HTTP-EQUIV="REFRESH" content="10; url=./"></body></html>')
+					self.wfile.write('<html><body><BODY BGCOLOR="#66ff66">User has been registered successfully. Refreshing in 10 seconds.<meta HTTP-EQUIV="REFRESH" content="10; url=./"></body></html>')
 
                 	# if it doesnt match then write user wasnt found
 	                if not match:
-        	                self.wfile.write('<html><body>[!] User was not found. Try manual methods :-(')
+						self.wfile.write('<html><body>[!] User was not found. Try manual methods :-(')
 
 		if self.path == "/":
         	        self.send_response(200)
