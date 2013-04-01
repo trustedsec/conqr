@@ -109,8 +109,8 @@ class HTTPHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 					self.wfile.write('<html><body><BODY BGCOLOR="#66ff66">User has been registered successfully. Refreshing in 10 seconds.<meta HTTP-EQUIV="REFRESH" content="10; url=./"></body></html>')
 
                 	# if it doesnt match then write user wasnt found
-	                if not match:
-						self.wfile.write('<html><body>[!] User was not found. Try manual methods :-(')
+			if not match:
+				self.wfile.write('<html><body>[!] User was not found. Try manual methods :-(')
 
 		if self.path == "/":
         	        self.send_response(200)
