@@ -58,8 +58,8 @@ def dns(ipaddr):
     while 1:
       data, addr = udps.recvfrom(1024)
       p=DNSQuery(data)
-      udps.sendto(p.respuesta(ip), addr)
-      print 'Response: %s -> %s' % (p.dominio, ip)
+      udps.sendto(p.respuesta(ipaddr), addr)
+      print 'Response: %s -> %s' % (p.dominio, ipaddr)
   except KeyboardInterrupt:
     print "Exiting the DNS Server.."
     udps.close()
