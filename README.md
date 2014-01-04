@@ -1,5 +1,5 @@
-ConQR - An open source platform for conferences and registration
-Copyright 2013 ConQR
+# ConQR - An open source platform for conferences and registration
+Copyright 2014 ConQR
 
 Written by: David Kennedy (ReL1K)
 Twitter: @dave_rel1k and @TrustedSec
@@ -16,7 +16,7 @@ Join the handheld device to the wireless network that has the QR Code server, on
 and identifies if the person has a ticket, has already checked in, or is not found. If found and has not checked in, the user is checked in and the user can successfully enter
 the conference. 
 
-Instructions:
+### Instructions:
 
 Step 1: 
 
@@ -29,14 +29,14 @@ Step 2:
 
 When you are ready, run conqr.py and provide which option you want and a filename if applicable.
 
-Basic structure:
+### Basic structure:
 
 src/database/conferences.txt - contains all of the email addresses and qrcode hash 
 src/database/registered.txt - contains those that have already registered
 configration/config - contains the config options for the qrcode system
 
-QRCode Server:
-
+### QRCode Server:
+ 
 The way that this works is in a normal network topology, you would have the QRCode server sitting on a wireless network thats closed off.
 
 You will need to configure the wireless AP / router to point to the QRCode server for DNS. ConQR has a DNS server it uses through Python
@@ -53,6 +53,6 @@ Handheld device ----> joined to access point ----> on same lan as QRCode Server
 
 That's it!
 
-TODO:
+### TODO:
 
 Web interface is ugly, first release, will make nicer in next release
