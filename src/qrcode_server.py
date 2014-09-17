@@ -92,7 +92,7 @@ class HTTPHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 			self.end_headers()
 			fileopen = file("database/conference.txt", "r")
 			data = fileopen.read()
-            if query in data:
+			if query in data:
 				if not os.path.isfile("database/registered.txt"):
 					filewrite = file("database/registered.txt", "w")
 					filewrite.write("")
@@ -101,7 +101,7 @@ class HTTPHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 				reg = file("database/registered.txt", "r")
 				reg_write = file("database/registered.txt", "a")
 				reg_data = reg.read()
-                if query in reg_data:
+				if query in reg_data:
 					self.wfile.write("User has already registered at the desk. Please check into this.")
 
 				else:
@@ -109,8 +109,8 @@ class HTTPHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 					reg_write.close()
 					self.wfile.write('<html><body><BODY BGCOLOR="#66ff66">User has been registered successfully. Refreshing in 10 seconds.<meta HTTP-EQUIV="REFRESH" content="10; url=./"></body></html>')
 
-            # if it doesnt match then write user wasnt found
-            else:
+            	# if it doesnt match then write user wasnt found
+            	else:
    				self.wfile.write('<html><body>[!] User was not found. Try manual methods :-(')
 
 		if self.path == "/":
