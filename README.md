@@ -2,7 +2,7 @@
 Copyright 2014 ConQR
 
 Written by: David Kennedy (ReL1K)
-Twitter: @dave_rel1k and @TrustedSec
+Twitter: @HackingDave and @TrustedSec
 Website: https://www.trustedsec.com
 
 ConQR is an open source QR Code ticketing system designed for Windows, Linux, or OSX. It's written in Python with no third party modules needed. The tool is designed

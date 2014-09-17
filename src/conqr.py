@@ -2,7 +2,7 @@
 #
 # ConQR - Making it easy for ticketing because, it can totally suck.
 # Written by: David Kennedy
-# Twitter: @dave_rel1k @TrustedSec
+# Twitter: @HackingDave @TrustedSec
 # Website: https://www.trustedsec.com
 #
 #
@@ -31,10 +31,10 @@ except IndexError:
 ConQR - The Open Source Way for Conference QR Management
 
 Written by: David Kennedy (ReL1K)
-TwitteR: @dave_rel1k @TrustedSec
+TwitteR: @HackingDave @TrustedSec
 Website: https://www.trustedsec.com	
 
-Verison: 0.1 Alpha Release
+Verison: 0.2 
 
 Options:
 

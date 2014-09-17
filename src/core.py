@@ -7,7 +7,6 @@ import os
 import hashlib
 import random
 import subprocess
-import re
 import time
 from src.qrcode import *
 import shutil

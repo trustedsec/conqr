@@ -1,4 +1,10 @@
 ~~~~~~~~~~~~~~~~~~~~
+version 0.3
+~~~~~~~~~~~~~~~~~~~~
+
+* fixed an exposure that would not do a full comparison of the hash string which could allow someone to do a small compare vs the entire string (special thanks to overflowingINT for the reported issue)
+
+~~~~~~~~~~~~~~~~~~~~
 version 0.2
 ~~~~~~~~~~~~~~~~~~~~
 

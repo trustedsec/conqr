@@ -8,7 +8,10 @@
 #
 ################################################################################
 
-import subprocess,sys,re,socket,os
+import subprocess
+import sys
+import socket
+import os
 import BaseHTTPServer,SimpleHTTPServer,cgi
 from SocketServer import BaseServer
 from BaseHTTPServer import HTTPServer
@@ -89,8 +92,7 @@ class HTTPHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 			self.end_headers()
 			fileopen = file("database/conference.txt", "r")
 			data = fileopen.read()
-			match = re.search(query, data)
-			if match:
+            if query in data:
 				if not os.path.isfile("database/registered.txt"):
 					filewrite = file("database/registered.txt", "w")
 					filewrite.write("")
@@ -99,8 +101,7 @@ class HTTPHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 				reg = file("database/registered.txt", "r")
 				reg_write = file("database/registered.txt", "a")
 				reg_data = reg.read()
-				match = re.search(query, reg_data)
-				if match:
+                if query in reg_data:
 					self.wfile.write("User has already registered at the desk. Please check into this.")
 
 				else:
@@ -108,9 +109,9 @@ class HTTPHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 					reg_write.close()
 					self.wfile.write('<html><body><BODY BGCOLOR="#66ff66">User has been registered successfully. Refreshing in 10 seconds.<meta HTTP-EQUIV="REFRESH" content="10; url=./"></body></html>')
 
-                	# if it doesnt match then write user wasnt found
-			if not match:
-				self.wfile.write('<html><body>[!] User was not found. Try manual methods :-(')
+            # if it doesnt match then write user wasnt found
+            else:
+   				self.wfile.write('<html><body>[!] User was not found. Try manual methods :-(')
 
 		if self.path == "/":
         	        self.send_response(200)
@@ -126,7 +127,7 @@ class HTTPHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 <br><br>
 Written by: David Kennedy<br>
 Website: <a href="https://www.trustedsec.com">https://www.trustedsec.com</a><br>
-Twitter: <a href="https://twitter.com/dave_rel1k">dave_rel1k</a> and <a href="https://twitter.com/trustedsec">TrustedSec</a><br>
+Twitter: <a href="https://twitter.com/HackingDave">HackingDave</a> and <a href="https://twitter.com/trustedsec">TrustedSec</a><br>
 
 <br><br>
 Instructions:<br><br>
