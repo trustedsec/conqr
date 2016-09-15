@@ -1,4 +1,10 @@
 ~~~~~~~~~~~~~~~~~~~~
+version 0.4
+~~~~~~~~~~~~~~~~~~~~
+
+* add con_noprompt.py which will not prompt if executed for automatic boot
+
+~~~~~~~~~~~~~~~~~~~~
 version 0.3
 ~~~~~~~~~~~~~~~~~~~~
 

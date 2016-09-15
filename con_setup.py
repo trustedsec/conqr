@@ -140,6 +140,7 @@ try:
 			shutil.copy("src/qrcode_server.py", "conferences/%s/src" % (conference_folder))
 			shutil.copy("src/__init__.py", "conferences/%s/src" % (conference_folder))
 			shutil.copy("src/qrcode.py", "conferences/%s/src" % (conference_folder))
+            shutil.copy("src/con_noprompt.py", "conferences/%s/src" % (conference_folder))
 			# write out the file
 			filewrite = file("conferences/%s/configuration/config" % (conference_folder), "w")
 			filewrite.write("""

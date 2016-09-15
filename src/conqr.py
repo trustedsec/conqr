@@ -34,7 +34,7 @@ Written by: David Kennedy (ReL1K)
 TwitteR: @HackingDave @TrustedSec
 Website: https://www.trustedsec.com	
 
-Verison: 0.2 
+Verison: 0.4 
 
 Options:
 

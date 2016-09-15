@@ -53,6 +53,10 @@ Handheld device ----> joined to access point ----> on same lan as QRCode Server
 
 That's it!
 
+### NO PROMPT
+
+There is a file called con_noprompt.py located in the root of the conference folder. This file will automatically allow you to launch the QRCode server without any prompt. This is useful if you want to have conqr load automatically on boot. Simply just run python con_noprompt.py <IPaddr of conqr server> and that is it.
+
 ### TODO:
 
 Web interface is ugly, first release, will make nicer in next release
