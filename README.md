@@ -1,5 +1,4 @@
 # ConQR - An open source platform for conferences and registration
-Copyright 2014 ConQR
 
 Written by: David Kennedy (ReL1K)
 Twitter: @HackingDave and @TrustedSec
